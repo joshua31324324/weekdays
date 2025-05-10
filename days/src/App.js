@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import dayChecker from "./utils/dayChecker";
 
 function App() {
+  // Call the dayChecker function to get the current day
+  const {day, link, image} = dayChecker();
+  const today = {day, link, image};
+  const todayNumber = new Date().getDay();
+
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <img src={today.image} className="App-logo" alt="logo" />
+        <h1>Today is {today.day}!</h1>
       </header>
+      <p>{today.day} is the {todayNumber}th day of the week. Would you like to know more? <a href={today.link}>Click here: </a></p>
     </div>
   );
 }
