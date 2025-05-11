@@ -3,8 +3,16 @@
   min-height: 100vh;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 100px;
+  padding-left: 20px;
+  padding-top: 100px;
+  margin: 0;
+  max-height: 100vh;
+  overflow: hidden;
 }
+html, body {
+  overflow: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -13,14 +21,14 @@ img {
   display: flex;
 }
 
-.App-header {
+.App-left {
   background-color: #282c34;
   min-height: 100vh;
   display: inline;
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.App-content {
+.App-right {
   display: flex;
   position: relative;
   flex-direction: column;
