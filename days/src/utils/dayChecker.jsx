@@ -1,9 +1,7 @@
 
 
 function dayChecker() {
-    let day;
-    let link;
-    let image;
+    let day, link, image, title;
     switch (new Date().getDay()) {
         case 0:
             day = "Sunday";
@@ -45,10 +43,12 @@ function dayChecker() {
             link = "https://en.wikipedia.org/wiki/Names_of_the_days_of_the_week";
             break;
     }
+    title = image ? `Today is ${day}` : "";
     return {
         day: day,
         link: link,
-        image: image
+        image: image,
+        title: title
     }
 }
 
